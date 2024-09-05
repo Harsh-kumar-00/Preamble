@@ -1,0 +1,185 @@
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Neue', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    float: left;
+    font-size: 28px;
+    margin: 0;
+}
+
+.navbar nav {
+    float: right;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ffe45e;
+}
+
+/* Home Section Styles */
+.home-section {
+    background: #ffe45e;
+    padding: 100px 0;
+    text-align: center;
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+}
+
+.home-section h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.home-section p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+/* About Section Styles */
+.about-section {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about-section p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Topics Section Styles */
+.topics-section {
+    background: #f0f8ff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.topics {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.topic-card {
+    background: #ffefd5;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.topic-card:hover {
+    transform: translateY(-10px);
+}
+
+.topic-card h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+/* Quizzes Section Styles */
+.quizzes-section {
+    background: #ffe45e;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.quizzes-section p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Contact Section Styles */
+.contact-section {
+    background-color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact-section p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.contact-section a {
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-section a:hover {
+    color: #333;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 16px;
+}
