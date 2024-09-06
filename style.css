@@ -79,9 +79,12 @@ body {
 /* Home Section Styles */
 .home-section {
     background: #ffe45e;
+    margin: 0px 15px 0px 15px;
+    border-left: 13px solid rgba(252, 245, 157, 0.671);
+    border-right: 13px solid rgba(252, 245, 157, 0.671);
     padding: 100px 0;
     background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
-    background-size: 60%;
+    background-size: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,25 +196,30 @@ body {
     justify-content: flex-start;
 }
 #p{
-    font-size: 30px;
-    padding-left: 20px;
+    font-size: 18px;
+    padding: 50px;
+    width: 60%;
 }
 .para img{
+    margin: 10px 50px;
     max-width: fit-content;
     max-height: 500px;
+    box-shadow: 0 -4px 10px rgba(39, 36, 36, 0.1)
     /* display: inline-block; */
 }
 
 /* Footer Styles */
 .footer {
+    
     background-color: #ff6f61;
     color: #fff;
     padding: 15px 0;
     text-align: center;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 100%;margin-top: 10px;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
 }
 
 .footer p {
