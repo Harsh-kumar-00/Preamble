@@ -1,4 +1,3 @@
-
 /* General Styles */
 body {
     margin: 0;
@@ -7,6 +6,7 @@ body {
     background-color: #f0f8ff;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .container {
@@ -32,6 +32,13 @@ body {
     float: left;
     font-size: 28px;
     margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 40px;
+    margin-right: 10px;
 }
 
 .navbar nav {
@@ -64,111 +71,109 @@ body {
 .home-section {
     background: #ffe45e;
     padding: 100px 0;
-    text-align: center;
     background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+    background-size: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.home-section h2 {
-    font-size: 42px;
+.home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.home-left, .home-right {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.home-left h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff6f61;
+}
+
+.home-left p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    margin-top: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 25px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #333;
+}
+
+.home-right h3 {
+    font-size: 24px;
+    color: #ff6f61;
     margin-bottom: 20px;
 }
 
-.home-section p {
-    font-size: 20px;
-    margin-bottom: 30px;
+.wheel-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
 }
 
-.btn {
-    background-color: #ff6f61;
-    color: #fff;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 700;
-    transition: background-color 0.3s, transform 0.2s;
+.wheel {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 8px solid #ff6f61;
+    position: relative;
+    overflow: hidden;
+    transition: transform 3s ease-out;
 }
 
-.btn:hover {
-    background-color: #333;
-    transform: scale(1.05);
-}
-
-/* About Section Styles */
-.about-section {
-    padding: 80px 0;
-    background-color: #fff;
+.wheel-segment {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: #fff7e1;
     text-align: center;
+    line-height: 100px;
+    transform-origin: bottom;
+    border-bottom: 1px solid #ff6f61;
+    border-right: 1px solid #ff6f61;
+    box-sizing: border-box;
 }
 
-.about-section p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
+.wheel-segment:nth-child(1) { transform: rotate(0deg); }
+.wheel-segment:nth-child(2) { transform: rotate(60deg); }
+.wheel-segment:nth-child(3) { transform: rotate(120deg); }
+.wheel-segment:nth-child(4) { transform: rotate(180deg); }
+.wheel-segment:nth-child(5) { transform: rotate(240deg); }
+.wheel-segment:nth-child(6) { transform: rotate(300deg); }
 
-/* Topics Section Styles */
-.topics-section {
-    background: #f0f8ff;
-    padding: 80px 0;
-    text-align: center;
-}
-
-.topics {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.topic-card {
-    background: #ffefd5;
-    border-radius: 15px;
-    padding: 20px;
-    margin: 10px;
-    width: 30%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.topic-card:hover {
-    transform: translateY(-10px);
-}
-
-.topic-card h3 {
-    margin-top: 0;
-    font-size: 24px;
-}
-
-/* Quizzes Section Styles */
-.quizzes-section {
-    background: #ffe45e;
-    padding: 80px 0;
-    text-align: center;
-}
-
-.quizzes-section p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-/* Contact Section Styles */
-.contact-section {
-    background-color: #fff;
-    padding: 80px 0;
-    text-align: center;
-}
-
-.contact-section p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.contact-section a {
-    color: #ff6f61;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.contact-section a:hover {
-    color: #333;
+#spin-button {
+    margin-top: 20px;
 }
 
 /* Footer Styles */
@@ -177,6 +182,10 @@ body {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .footer p {
