@@ -2,91 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn the Constitution</title>
-    <!-- Link to CSS file -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Constitution Hub</title>
 </head>
 <body>
+
     <!-- Navbar -->
     <header class="navbar">
         <div class="container">
-            <h1 class="logo">📝 Constitution Hub</h1>
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+                Constitution Hub
+            </div>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#topics">Topics</a></li>
-                    <li><a href="#quizzes">Quizzes</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Topics</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Home Section -->
-    <section id="home" class="home-section">
-        <div class="container">
-            <h2>Welcome to Constitution Hub! 🎉</h2>
-            <p>Learning the Constitution has never been this fun! Dive in to explore, play, and learn! 🌟</p>
-            <a href="#about" class="btn">Let’s Go! 🚀</a>
-        </div>
-    </section>
-
-    <!-- About the Constitution Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2>What's the Constitution? 🤔</h2>
-            <p>It’s like the ultimate rulebook of India! Ready to know more about how the country runs? Let’s get started! 📚</p>
-            <a href="#topics" class="btn">Explore More! 🕵️‍♂️</a>
-        </div>
-    </section>
-
-    <!-- Learn by Topic Section -->
-    <section id="topics" class="topics-section">
-        <div class="container">
-            <h2>Choose Your Adventure! 🗺️</h2>
-            <div class="topics">
-                <div class="topic-card">
-                    <h3>🛡️ Fundamental Rights</h3>
-                    <p>Your superpowers as a citizen! Learn all about them here.</p>
+    <section class="home-section">
+        <div class="container home-container">
+            <div class="home-left">
+                <h2>Welcome to Constitution Hub! 🎉</h2>
+                <p>Learning the Constitution has never been this fun! Dive in to explore, play, and learn!</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search by Article No..." />
+                    <button>Search</button>
                 </div>
-                <div class="topic-card">
-                    <h3>📜 Directive Principles</h3>
-                    <p>The guidelines to help our leaders lead us better.</p>
-                </div>
-                <div class="topic-card">
-                    <h3>🚨 Fundamental Duties</h3>
-                    <p>Responsibilities that make you a superhero citizen! 🦸‍♂️</p>
+            </div>
+            <div class="home-right">
+                <h3>Spin the Wheel to Learn!</h3>
+                <div class="wheel-container">
+                    <div class="wheel" id="wheel">
+                        <div class="wheel-segment">Part I</div>
+                        <div class="wheel-segment">Part II</div>
+                        <div class="wheel-segment">Fundamental Rights</div>
+                        <div class="wheel-segment">DPSP</div>
+                        <div class="wheel-segment">Fundamental Duties</div>
+                        <div class="wheel-segment">Preamble</div>
+                    </div>
+                    <button id="spin-button" class="btn">Spin</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Quizzes and Games Section -->
-    <section id="quizzes" class="quizzes-section">
-        <div class="container">
-            <h2>Play & Learn! 🎮</h2>
-            <p>Test your knowledge with cool quizzes and games. Ready for a challenge? 💪</p>
-            <a href="#" class="btn">Take a Quiz! 🎯</a>
-        </div>
-    </section>
-
-    <!-- Contact Us Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Let’s Talk! 💬</h2>
-            <p>Got questions or ideas? We’d love to hear from you! Reach out at <a href="mailto:info@constitutionhub.com">info@constitutionhub.com</a>.</p>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Constitution Hub. Made with ❤️ for curious minds!</p>
-        </div>
+        <p>&copy; 2024 Constitution Hub. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for the Spin Wheel -->
+    <script src="script.js"></script>
+
 </body>
 </html>
+
