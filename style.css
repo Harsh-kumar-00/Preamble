@@ -151,12 +151,12 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 8px solid #333;
+    border: 2px solid #f5efef;
     position: relative;
     overflow: hidden;
     box-shadow: 
-        0 5px 10px rgba(0, 0, 0, 0.4), /* Soft shadow */
-        0 15px 30px rgba(0, 0, 0, 0.3); /* Deeper shadow for 3D effect */
+        0 5px 10px rgba(119, 91, 14, 0.4), /* Soft shadow */
+        0 15px 30px rgba(219, 221, 78, 0.3); /* Deeper shadow for 3D effect */
     transform: rotate(0deg);
     transition: transform 4s ease-out;
 }
@@ -170,6 +170,7 @@ body {
     left: 50%;
     transform-origin: 0% 0%;
     text-align: center;
+    justify-content: center;
     line-height: 150px;
     font-size: 20px;
     font-weight: bold;
@@ -186,6 +187,7 @@ body {
 .wheel-segment:nth-child(5) { transform: rotate(240deg); }
 .wheel-segment:nth-child(6) { transform: rotate(300deg); }
 
+
 /* Pointer Styles */
 .pointer {
     position: absolute;
@@ -193,7 +195,7 @@ body {
     height: 0;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-top: 20px solid #000000; /* Pointer color */
+    border-top: 20px solid #6b3008; /* Pointer color */
     top: 50%;
     right: -30px; /* Adjust to position it outside the wheel */
     transform: translateY(-50%); /* No rotation, just centered vertically */
@@ -238,7 +240,8 @@ button:hover {
 
 /* Additional Sections */
 .additional-section {
-    background-color: #000; /* Change background to black */
+    background-color: #eeb73f;
+    background-color: ; /* Change background to black */
     padding: 50px 0;
     color: white; /* Title color is white */
 }
@@ -252,7 +255,7 @@ button:hover {
 }
 
 .section-item {
-    background-color: #333; /* Card background color */
+    background-color: #f8f2f2; /* Card background color */
     padding: 20px;
     margin: 10px;
     border-radius: 8px;
@@ -261,12 +264,14 @@ button:hover {
 }
 
 .section-item h2 {
-    color: #fff;
+    color: #be770d;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-bottom: 10px;
 }
 
 .section-item p {
-    color: #ff6f61;
+    color: #131211;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
 }
 
@@ -311,4 +316,5 @@ button:hover {
     text-decoration: underline #a86c0a;
     margin-left: 15px;
     margin-bottom: 10px;
+    padding: 15px;
 }

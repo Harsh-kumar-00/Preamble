@@ -24,7 +24,7 @@ wheel.addEventListener('click', () => {
     
     // Calculate the result segment based on the final rotation
     const resultIndex = Math.floor(((3600 + randomDegree) % 360) / 60);
-    const segments = ['Part I', 'Part II', 'Fundamental Rights', 'DPSP', 'Fundamental Duties', 'Preamble'];
+    const segments = ['1', '2', '3', '4', '5', '6'];
     const result = segments[resultIndex];
     
     // Output the result to the console or display it on the page
