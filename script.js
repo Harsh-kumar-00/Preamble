@@ -1,19 +1,49 @@
+// Select the wheel and search input elements
 const wheel = document.getElementById('wheel');
-const spinButton = document.getElementById('spinButton');
+const searchInput = document.getElementById('search-input');
 
-spinButton.addEventListener('click', () => {
-    const randomRotation = Math.floor(Math.random() * 360) + 360 * 5; // spin the wheel at least 5 rounds
-    wheel.style.transform = `rotate(${randomRotation}deg)`;
+// Create audio for spinning sound
+const spinSound = new Audio('spin-sound.mp3');
+spinSound.preload = 'auto';
 
-    // Disable button while spinning
-    spinButton.disabled = true;
+// Create audio for typing sound
+const typingSound = new Audio('typing-sound.mp3');
+typingSound.preload = 'auto';
 
-    setTimeout(() => {
-        // Enable button again after spinning
-        spinButton.disabled = false;
+// Function to spin the wheel
+wheel.addEventListener('click', () => {
+    // Play the spinning sound
+    spinSound.play();
 
-        // Calculate the result based on the rotation
-        const result = (randomRotation % 360) / 60;
-        alert(`Congratulations! You won precise format of article ${Math.floor(6 - result + 1)}`);
-    }, 5000); // 5 seconds for the spin animation
+    // Generate a random degree between 0 and 360
+    const randomDegree = Math.floor(Math.random() * 360);
+
+    // Apply rotation with a smooth transition
+    wheel.style.transition = 'transform 4s ease-out'; // Smooth transition for 4 seconds
+    wheel.style.transform = `rotate(${3600 + randomDegree}deg)`;
+    
+    // Calculate the result segment based on the final rotation
+    const resultIndex = Math.floor(((3600 + randomDegree) % 360) / 60);
+    const segments = ['Part I', 'Part II', 'Fundamental Rights', 'DPSP', 'Fundamental Duties', 'Preamble'];
+    const result = segments[resultIndex];
+    
+    // Output the result to the console or display it on the page
+    console.log(`Wheel stopped at: ${result}`);
 });
+
+// Add event listeners for typing sound
+searchInput.addEventListener('keydown', () => {
+    // Play the typing sound if it's not already playing
+    if (typingSound.paused) {
+        typingSound.loop = true; // Loop the typing sound
+        typingSound.play();
+    }
+});
+
+searchInput.addEventListener('keyup', () => {
+    // Stop the typing sound when the key is released
+    typingSound.pause();
+    typingSound.currentTime = 0; // Reset the sound to the beginning
+});
+
+
