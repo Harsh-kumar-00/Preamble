@@ -16,9 +16,9 @@ body {
 .rope {
     width: 100vmax;  /* Adjust the width to fit the rope image */
     height: 150px; /* Full height */
-    background-image: url('rope1.png'); /* Add the path to your rope image */
-    background-size: cover; /* Scale the image to cover the element */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
+    /*background-image: url('rope1.png'); /* Add the path to your rope image */
+    /*background-size: cover; /* Scale the image to cover the element */
+    /*background-repeat: no-repeat; /* Prevent the image from repeating */
     position: fixed;
     top: 0;
     left: 0;
