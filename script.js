@@ -46,4 +46,18 @@ searchInput.addEventListener('keyup', () => {
     typingSound.currentTime = 0; // Reset the sound to the beginning
 });
 
+const images = document.querySelectorAll('.carousel-image');
+let currentIndex = 0;
+
+function showNextImage() {
+    images[currentIndex].classList.remove('active');  // Hide the current image
+    currentIndex = (currentIndex + 1) % images.length;  // Move to the next index in a loop
+    images[currentIndex].classList.add('active');  // Show the next image
+}
+
+// Change images every 3 seconds (3000 milliseconds)
+setInterval(showNextImage, 5000);
+
+// Initially show the first image
+images[currentIndex].classList.add('active');
 
