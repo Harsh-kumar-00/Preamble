@@ -21,6 +21,7 @@ body {
 
 /* Navbar Styles */
 .navbar {
+    align-items: end;
     background-color: #ff6f61;
     color: #fff;
     padding: 10px 0;
@@ -37,6 +38,7 @@ body {
     margin: 0;
     display: flex;
     align-items: center;
+    margin-right: 530px;
 }
 
 .navbar .logo img {
@@ -52,7 +54,7 @@ body {
 
 .navbar ul li {
     display: inline;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .navbar ul li a {
