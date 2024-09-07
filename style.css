@@ -68,12 +68,12 @@ body {
 
 /* Home Section Styles */
 .home-section {
-    background: #ffe45e;
-    margin: 0px 15px 0px 15px;
-    border-left: 13px solid rgba(252, 245, 157, 0.671);
-    border-right: 13px solid rgba(252, 245, 157, 0.671);
+    background: #f4e6a1;
+    margin: 0px 0px 0px 0px;
+    border-left: 0px solid rgba(252, 245, 157, 0.671);
+    border-right: 0px solid rgba(252, 245, 157, 0.671);
     padding: 100px 0;
-    background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+    /*background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
     background-size: cover; /* Ensure background covers entire section */
     display: flex;
     align-items: center;
@@ -267,5 +267,4 @@ button:hover {
     color: #ff6f61;
     font-size: 18px;
 }
-
 
