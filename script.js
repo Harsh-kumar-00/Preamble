@@ -29,3 +29,43 @@ setInterval(showNextImage, 5000);
 
 // Initially show the first image
 images[currentIndex].classList.add('active');
+
+document.querySelectorAll('.article-titles .title').forEach(title => {
+    title.addEventListener('mouseover', () => {
+        // Add your JavaScript code here for extra behavior
+        console.log('Hovered over ' + title.textContent);
+    });
+});
+
+document.getElementById('rope').addEventListener('click', function () {
+    const imageOverlay = document.getElementById('imageOverlay');
+    const content = document.getElementById('content');
+
+    // Check if the overlay is currently pulled down
+    if (imageOverlay.style.top === '0%') {
+        // Pull up the image overlay
+        hideOverlay(imageOverlay, content);
+    } else {
+        // Pull down the image overlay
+        showOverlay(imageOverlay, content);
+    }
+});
+
+// Function to hide the overlay
+function hideOverlay(overlay, content) {
+    overlay.style.top = '-100%'; // Move it back up
+    content.classList.remove('blur'); // Remove blur effect from background
+}
+
+// Function to show the overlay
+function showOverlay(overlay, content) {
+    overlay.style.top = '0%'; // Bring it down
+    content.classList.add('blur'); // Add blur effect to background
+}
+
+// Add an event listener to the image overlay to hide it when clicked
+document.getElementById('imageOverlay').addEventListener('click', function () {
+    const content = document.getElementById('content');
+    hideOverlay(this, content); // Hide the overlay when clicked
+});
+
