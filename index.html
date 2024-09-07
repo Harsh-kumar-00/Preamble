@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <title>Constitution Hub</title>
 </head>
-
 <body>
 
     <!-- Navbar -->
@@ -19,18 +17,15 @@
                 <img src="logo.png" alt="Logo">
                 Constitution Hub
             </div>
-            <div class="options">
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Topics</a></li>
-                        <li><a href="#">Quizzes</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Topics</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -41,38 +36,41 @@
                 <h2>Welcome to Constitution Hub! 🎉</h2>
                 <p>Learning the Constitution has never been this fun! Dive in to explore, play, and learn!</p>
                 <div class="search-bar">
-                    <input type="text" placeholder="Search by Article No..." />
+                    <input type="text" placeholder="Search by Article No..." id="search-input" />
                     <button>Search</button>
                 </div>
             </div>
             <div class="home-right">
                 <h3>Spin the Wheel to Learn!</h3>
-                <div class="container">
+                <div class="wheel-container">
                     <div class="wheel" id="wheel">
-                        <div class="wheel-segment">Ariticle 1</div>
-                        <div class="wheel-segment">Article 2</div>
-                        <div class="wheel-segment">Article 3</div>
-                        <div class="wheel-segment">Article 4</div>
-                        <div class="wheel-segment">Article 5</div>
-                        <div class="wheel-segment">Article 6</div>
+                        <div class="wheel-segment">Part I</div>
+                        <div class="wheel-segment">Part II</div>
+                        <div class="wheel-segment">Fundamental Rights</div>
+                        <div class="wheel-segment">DPSP</div>
+                        <div class="wheel-segment">Fundamental Duties</div>
+                        <div class="wheel-segment">Preamble</div>
                     </div>
-                    <button id="spinButton">Spin the Wheel! <br>And learn the Constitution</button>
+                    <div class="pointer" id="pointer"></div>
                 </div>
-                <script src="script.js"></script>
             </div>
         </div>
     </section>
 
-    <section>
-        <div class="para">
-            <div class="paragraph">
-                <p id="p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam consequatur autem
-                    libero ab nisi et blanditiis nam, ad qui consectetur esse necessitatibus illum, voluptas accusamus
-                    saepe? Impedit, illo reprehenderit ipsam nemo suscipit quam animi veritatis totam? Doloremque itaque
-                    delectus voluptatum in voluptas ad maxime, quod facere molestiae deleniti et praesentium?</p>
+    <!-- Additional Sections -->
+    <section class="additional-section">
+        <div class="section-container">
+            <div class="section-item">
+                <h2>Fundamental Rights</h2>
+                <p>Title 1</p>
             </div>
-            <div class="preface">
-                <img src="preface.jpg" alt="preface" srcset="">
+            <div class="section-item">
+                <h2>Fundamental Duties</h2>
+                <p>Title 2</p>
+            </div>
+            <div class="section-item">
+                <h2>Directive Principles</h2>
+                <p>Title 3</p>
             </div>
         </div>
     </section>
@@ -82,9 +80,9 @@
         <p>&copy; 2024 Constitution Hub. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for the Spin Wheel -->
+    <!-- JavaScript for the Wheel and Typing Sound -->
     <script src="script.js"></script>
 
 </body>
-
 </html>
+
