@@ -296,7 +296,7 @@ button:hover {
 .additional-section {
     background: #76afa2;/* Change background to black */
     padding: 50px 0;
-    color: white; /* Title color is white */
+    color: #b35a07; /* Title color is white */
 }
 
 .section-container {
@@ -318,10 +318,11 @@ button:hover {
 
 .section-item h2 {
     color: #011f44;
+    font-weight: 600;
     margin-bottom: 10px;
 }
 
-.section-item p {
+.section-item p ul {
     color: #094437;
     font-size: 18px;
 }
@@ -360,7 +361,7 @@ button:hover {
     opacity: 1;
 }
 
-.title{
+.heading{
     font-size: 30px;
     font-weight: 600;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -461,4 +462,32 @@ h3{
     left: 50px;
     right: 900px;
 
+}
+/* Article Titles Styles */
+.article-titles {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(0%); /* Change to start on the screen */
+    text-align: right;
+    z-index: 1001; /* Increased to ensure visibility over other elements but less than navbar */
+    display: block;
+}
+
+.article-titles .title {
+    cursor: pointer;
+    display: block; /* Ensure that each title is on a new line */
+    transform: translateX(0%); /* Start without being translated to the right */
+    white-space: nowrap;
+    padding: 5px 20px;
+    background-color: #094e24; /* Same as your wheel background for consistency */
+    color: white;
+    transition: transform 0.5s ease-in-out;
+    border-radius: 5px 0 0 5px;
+    margin-top: 5px; /* Space between titles */
+}
+
+.article-titles .title:hover {
+    transform: translateX(-100%); /* Extend to the left on hover */
+    background-color: #022016; /* Slightly darker shade for hover effect */
 }
